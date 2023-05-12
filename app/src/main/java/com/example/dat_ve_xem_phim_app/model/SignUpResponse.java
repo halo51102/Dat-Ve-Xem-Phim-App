@@ -1,32 +1,27 @@
-package com.example.dat_ve_xem_phim_app;
+package com.example.dat_ve_xem_phim_app.model;
 
 import com.google.gson.annotations.SerializedName;
 
-import java.io.Serializable;
-
-public class LoginResponse implements Serializable {
+public class SignUpResponse {
     @SerializedName("success")
     private boolean success;
     @SerializedName("message")
     private String message;
     @SerializedName("accountModel")
     private TaiKhoanModel accountModel;
-
-
-    public LoginResponse() {
+    public SignUpResponse() {
         super();
     }
-    public LoginResponse(boolean success, String message, TaiKhoanModel accountModel) {
+    public SignUpResponse(boolean success, String message, TaiKhoanModel accountModel) {
         super();
         this.success = success;
         this.message = message;
         this.accountModel = accountModel;
     }
-    public LoginResponse(boolean success, String message) {
+    public SignUpResponse(boolean success, String message) {
         super();
         this.success = success;
         this.message = message;
-
     }
     public boolean isSuccess() {
         return success;
@@ -46,5 +41,4 @@ public class LoginResponse implements Serializable {
     public void setAccountModel(TaiKhoanModel accountModel) {
         this.accountModel = accountModel;
     }
-
 }

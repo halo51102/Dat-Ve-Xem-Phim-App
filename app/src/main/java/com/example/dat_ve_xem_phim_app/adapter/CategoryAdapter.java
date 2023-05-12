@@ -1,4 +1,4 @@
-package com.example.dat_ve_xem_phim_app;
+package com.example.dat_ve_xem_phim_app.adapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -13,6 +13,9 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.example.dat_ve_xem_phim_app.R;
+import com.example.dat_ve_xem_phim_app.activity.FilmDetailActivity;
+import com.example.dat_ve_xem_phim_app.model.FilmModel;
 
 import java.util.List;
 
@@ -45,7 +48,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.MyView
                 @Override
                 public void onClick(View view) {
 
-                    Toast.makeText(context,"Bạn đã chọn category"+tenSp.getText().toString(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(context,tenSp.getText().toString(), Toast.LENGTH_SHORT).show();
                 }
             });
         }
@@ -61,7 +64,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.MyView
         imgCategory.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(context,FilmDetailActivity.class);
+                Intent intent=new Intent(context, FilmDetailActivity.class);
                 context.startActivity(intent);
             }
         });

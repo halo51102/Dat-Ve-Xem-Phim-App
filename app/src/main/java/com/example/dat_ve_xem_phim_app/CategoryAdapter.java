@@ -61,7 +61,8 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.MyView
         imgCategory.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //code
+                Intent intent=new Intent(context,FilmDetailActivity.class);
+                context.startActivity(intent);
             }
         });
 // Tạo Intent để chuyển sang Activity hiển thị danh sách sản phẩm

@@ -5,7 +5,6 @@ plugins {
 android {
     namespace 'com.example.dat_ve_xem_phim_app'
     compileSdk 33
-
     defaultConfig {
         applicationId "com.example.dat_ve_xem_phim_app"
         minSdk 24

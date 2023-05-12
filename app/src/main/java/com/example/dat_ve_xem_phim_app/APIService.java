@@ -1,5 +1,9 @@
 package com.example.dat_ve_xem_phim_app;
 
+import com.example.dat_ve_xem_phim_app.model.FilmModel;
+import com.example.dat_ve_xem_phim_app.model.LoginResponse;
+import com.example.dat_ve_xem_phim_app.model.SignUpResponse;
+
 import java.util.List;
 
 import retrofit2.Call;
@@ -13,6 +17,9 @@ public interface APIService {
     Call<List<FilmModel>> getCategoryAll();
     @POST("login")
     @FormUrlEncoded
-    Call<LoginResponse> login(@Field("email") String email,@Field("Pass") String pass);
+    Call<LoginResponse> login(@Field("email") String email, @Field("Pass") String pass);
+    @POST("register")
+    @FormUrlEncoded
+    Call<LoginResponse> signup(@Field("email" ) String username,@Field("Pass") String pass, @Field("Ten") String ten);
 
 }

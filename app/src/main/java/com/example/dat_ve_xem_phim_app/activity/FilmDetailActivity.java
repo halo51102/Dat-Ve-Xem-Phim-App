@@ -1,8 +1,10 @@
-package com.example.dat_ve_xem_phim_app;
+package com.example.dat_ve_xem_phim_app.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.dat_ve_xem_phim_app.R;
 
 public class FilmDetailActivity extends AppCompatActivity {
 

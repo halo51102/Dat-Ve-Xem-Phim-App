@@ -1,4 +1,4 @@
-package com.example.dat_ve_xem_phim_app;
+package com.example.dat_ve_xem_phim_app.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,9 +8,14 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.material.textfield.TextInputLayout;
+import com.example.dat_ve_xem_phim_app.APIService;
+import com.example.dat_ve_xem_phim_app.model.LoginResponse;
+import com.example.dat_ve_xem_phim_app.R;
+import com.example.dat_ve_xem_phim_app.RetrofitClient;
+import com.example.dat_ve_xem_phim_app.model.TaiKhoanModel;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -21,6 +26,8 @@ public class LoginActivity extends AppCompatActivity {
 EditText edtEmail,ediPass;
 private APIService apiService;
 Button btnLogin;
+TextView register;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,11 +39,19 @@ Button btnLogin;
                 userLogin();
             }
         });
+        register.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(LoginActivity.this, SignupActivity.class);
+                startActivity(intent);
+            }
+        });
     }
     private  void AnhXa(){
         edtEmail=(EditText) findViewById(R.id.etUserName);
         ediPass=(EditText) findViewById(R.id.etUserPassword);
         btnLogin=(Button) findViewById(R.id.btnLogin);
+        register=findViewById(R.id.tvRegister);
     }
     private void userLogin(){
         String username=edtEmail.getText().toString();
@@ -63,7 +78,7 @@ Button btnLogin;
                         TaiKhoanModel user=loginResponse.getAccountModel();
 //                        SharedPrefManager.getInstance(getApplicationContext()).userLogin(user);
                         finish();
-                        Intent intent=new Intent(LoginActivity.this,MainActivity.class);
+                        Intent intent=new Intent(LoginActivity.this, MainActivity.class);
                         startActivity(intent);
                     }
                     else{

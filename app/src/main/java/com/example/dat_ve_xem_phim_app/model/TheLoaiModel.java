@@ -1,4 +1,4 @@
-package com.example.dat_ve_xem_phim_app;
+package com.example.dat_ve_xem_phim_app.model;
 
 import com.google.gson.annotations.SerializedName;
 

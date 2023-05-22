@@ -6,23 +6,23 @@
 ### Hồ Hà Thanh Lâm 20110667
 ## Xây dựng ứng dụng đặt vé xem phim gồm:
 ### User:
-#### Đăng nhập, đăng ký
-#### Xem thông tin phim
-#### Đặt vé và thanh toán
+#### - Đăng nhập, đăng ký
+#### - Xem thông tin phim
+#### - Đặt vé và thanh toán
 ### Quản lý rạp:
-### Đăng nhập
-#### Xem thông tin phim
-#### Thêm phim chiếu
-#### Xóa phim chiếu
-#### Lên lịch chiếu
-#### Thêm phòng chiếu cho rạp
-#### Thêm khung giờ chiếu theo từng phòng
-#### Thay đổi trạng thái những suất chiếu
-#### Quản lý thông tin rạp chiếu
+### - Đăng nhập
+#### - Xem thông tin phim
+#### - Thêm phim chiếu
+#### - Xóa phim chiếu
+#### - Lên lịch chiếu
+#### - Thêm phòng chiếu cho rạp
+#### - Thêm khung giờ chiếu theo từng phòng
+#### - Thay đổi trạng thái những suất chiếu
+#### - Quản lý thông tin rạp chiếu
 ### Admin
-#### Thêm rạp chiếu và tạo tài khoản quản lý rạp chiếu đó
-#### Thêm phim sắp được công chiếu
+#### - Thêm rạp chiếu và tạo tài khoản quản lý rạp chiếu đó
+#### - Thêm phim sắp được công chiếu
 ### Công nghệ sử dụng:
-#### API Servlet, JDBC
-#### Thư viện Volley để call API
-#### MySQL để lưu trữ database.
+#### - API Servlet, JDBC
+#### - Thư viện Volley để call API
+#### - MySQL để lưu trữ database.
